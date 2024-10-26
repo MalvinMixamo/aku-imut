@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kipinn</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <nav id="nav">
+    <div class="kasir">
+        <span>KASIR</span>
+      </div>
+        <div class="laporan">
+        <div id="no-margin">
+            
+        </div>
+        <div id="laporan-container">
+            <span>Laporan Hari ini</span>
+            <div id="pelaporan">
+              <div id="Pemasukan">
+                <p id="no-margin">Pemasukan</p>
+                <div id="count-pemasukan">
+                  <p>Rp.1.500.000</p>
+                </div>
+              </div>
+              <div id="pengeluaran">
+                <p id="no-margin">Pengeluaran</p>
+              </div>
+            </div>
+        </div>
+    </div>
+  </nav>
+  <div class="window" id="produk">
+    <div id="backToMenu">
+      <button class="windowLink" onclick="openWindow('landingPage', this)" id="defaultOpen">
+        <!-- <img src="src/back" alt="" width="5px"> -->
+      </button>
+    </div>
+    <div id="list-item">
+      <div id="item-produk">
+        <div class="container-item">
+          <div id="produk-container">
+            <div id="gambar-produk">
+              <img src="src/TikTok.png" alt="" width="137px">
+            </div>
+            <div id="info-produk">
+              <div id="nama">
+                <p id="nama-produk">Nama Produk</p>
+              </div>
+              <div id="harga">
+                <p id="harga-produk"><b>Harga Produk</b></p>
+              </div>
+            </div>
+            <div id="count-produk">
+              <div id="count-parent">
+                <p id="count">1</p>
+              </div>           
+              <div id="count-plus">
+                <button><img src="src/image 2.png" alt="" width="48px"></button>                
+              </div>
+                
+            </div>
+          </div>      
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div id="landingPage" class="window">
+    <div class="tokoUser">
+      <div id="toko-profil">
+          <img src="src/Profil.jpg" alt="" width="138px" height="138px">
+      </div>
+      <div id="informasi-container">
+        <div>
+          <span>Toko Kipin</span>
+        </div>
+        <div>
+          <span>Jl.AJanuatan</span>
+        </div>
+      </div>
+    </div>
+    <div class="list"> 
+      <button class="windowLink" onclick="openWindow('produk', this)" id="openProduk">
+          <img src="src/pngwing.com (19).png" alt="GambarProduk" width="264px" height="240px">
+          <h1 class="tidakAdaGariBawah">PRODUK</h1>
+      </button>
+      <button href="" class="windowLink">
+          <img src="src/Linkedin.png" alt="" width="264px" height="240px">
+      </button>
+      <button class="windowLink" id="pojok">
+          <img src="src/Instagram.png" alt="" width="264px" height="240px">
+      </button>
+      <button class="windowLink">
+        <img src="src/pngwing.com (19).png" alt="GambarProduk" width="264px" height="240px">
+        <h1 class="tidakAdaGariBawah">PRODUK</h1>
+      </button>
+      <button href="" class="windowLink">
+        <img src="src/Linkedin.png" alt="" width="264px" height="240px">
+      </button>
+      <button class="windowLink" id="pojok">
+        <img src="src/Instagram.png" alt="" width="264px" height="240px">
+      </button>
+      <button class="windowLink" id="scan" onclick="openWindow('Toko', this)">
+        SCAN SEKARANG
+      </button>
+    </div>
+  </div>
+  <div id="Toko" class="window">
+    <div id="layout">
+      <nav>
+        <ul>
+          <li>
+            <button class="tablink" onclick="openTab('toko', this)">Toko</button>
+          </li>
+          <li>
+            <button class="tablink" onclick="openTab('kelolaStok', this)">Kelola Stok</button>
+          </li>
+          <li>
+            <button class="tablink" onclick="openTab('tambahKaryawan', this)">Tambah Karyawan</button>
+          </li>
+          <li>
+            <button class="tablink" onclick="openTab('daftarKaryawan', this)">Kelola Karyawan</button>
+          </li>
+          <li>
+            <button class="tablink" type="button" onclick="cek(), openTab('cekToko', this)">Cek Tokomu!</button>
+          </li>
+          
+          <button class="tablink" onclick="openTab('receipt', this)">struk</button>
+        </ul>
+          
+      </nav>
+      <div class="parent">
+        <div id="receipt" class="tabContent">
+          <header>
+            <h2>Toko Sejahtera</h2>
+            <p>Jalan Janturan no. 387, Yogyakarta</p>
+            <p>Tanggal: 10-10-2024</p>
+          </header>
+      
+          <section class="items" id="items">
+          </section>
+      
+          <footer>
+            <div class="total" id="total">
+              <strong>Total:</strong>
+              <strong id="totalAmount">Rp0</strong>
+            </div>
+            <p>Terima Kasih atas kunjungan Anda!</p>
+          </footer>
+        </div>
+      <div id="cekToko" class="tabContent">
+          <p id="result"></p>
+      </div>
+      <div id="kelolaStok" class="tabContent">
+          <form id="productForm">
+              <label for="barcode">Barcode:</label>
+              <input type="text" id="barcode" name="barcode" required><br><br>
+              
+              <label for="name">Nama Produk:</label>
+              <input type="text" id="name" name="name" required><br><br>
+              
+              <label for="price">Harga:</label>
+              <input type="number" id="price" name="price" required><br><br>
+              <label for="quantity">isikan dengan 1</label>
+              <input type="number" id="quantity" name="quantity" required> <br><br>
+              <button type="submit">Tambah Produk</button>
+            </form>
+      </div>
+      <div id="toko" class="tabContent">
+          <div id="video"></div>
+      </div>
+      <div id="tambahKaryawan" class="tabContent">
+        <form>
+            <label for="namaKaryawan">Nama Karyawan: </label>
+            <input type="text" id="namaKaryawan" placeholder="Masukkan nama karyawan">
+            <br><br>
+            <label for="gajiKaryawan">Gaji Per Bulan: </label>
+            <input type="number" id="gajiKaryawan" placeholder="Masukkan gaji karyawan">
+            <br><br>
+            <button type="button" onclick="tambahKaryawan()">Tambah Karyawan</button>
+        </form>
+    </div>
+      </div>
+        
+  </div>
+  <div id="daftarKaryawan" class="tabContent">
+      <h3>Daftar Karyawan</h3>
+      <p id="karyawanNull"></p>
+  </div>
+  <div id="scan-container"></div>
+</br>
+  <ul id="daftarKaryawan"></ul>
+  <p id="untungBersih"></p>
+  </div>
+
+
+    <audio id="beepSound" src="src/mixkit-censorship-beep-1082.wav"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
